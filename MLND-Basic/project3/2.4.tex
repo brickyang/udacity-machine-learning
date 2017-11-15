@@ -1,0 +1,152 @@
+\documentclass[UTF8,nofonts]{ctexart}
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont=STHeiti,ItalicFont=STKaiti]{STSong}
+\setCJKsansfont[BoldFont=STHeiti]{STXihei}
+\setCJKmonofont{STFangsong}
+\usepackage{amsmath}
+
+\setlength{\parindent}{0pt}
+\begin{document}
+\textbf{Project 3: 2.4 证明} \\
+
+设有矩阵 $A$：
+\begin{gather*}
+A=
+\begin{bmatrix} 
+    1 & \cdots & 0 & x_{1c} & \cdots & x_{1n}  \\ 
+    \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+    0 & \cdots & 1 & x_{ic} & \cdots & x_{in} \\
+    0 & \cdots & 0 & 0 & \cdots & \ y_{(i+1)n}\\
+    \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+    0 & \cdots & 0 & 0 & \cdots & y_{mn}\\
+\end{bmatrix}
+\end{gather*} \\
+当 $A$ 的第 $c$ 列，即$x_{1c}$～$x_{ic}$ 全为 0 时，则有非零向量 $x$：
+\begin{gather*}
+x=
+\begin{bmatrix} 
+    0  \\ 
+    \vdots \\
+    x \\
+    \vdots \\
+    0 \\
+\end{bmatrix}
+\end{gather*}
+即 $x$ 的第 $c$ 行为非零实数，其余各行均为 0，使得
+\begin{gather*}
+Ax=
+\begin{bmatrix} 
+    1 \\ 
+    \vdots  \\
+    0 \\
+\end{bmatrix}
+\cdot 0 + \cdots +
+\begin{bmatrix} 
+    x_{1c} \\ 
+    \vdots  \\
+    0 \\
+\end{bmatrix}
+\cdot e_{c} + \cdots + 
+\begin{bmatrix} 
+x_{1n} \\ 
+\vdots  \\
+y_{mn} \\
+\end{bmatrix} 
+\cdot 0 = 0 \\
+\end{gather*} 
+
+
+当 $A$ 的第 $c$ 列不全为 0 时，则有非零向量 $x$：
+\begin{gather*}
+x=
+\begin{bmatrix} 
+-x_{1c}  \\ 
+\vdots \\
+-x_{ic} \\
+1 \\
+\vdots \\
+0 \\
+\end{bmatrix}
+\end{gather*}
+使得
+\begin{gather*}
+Ax=
+\begin{bmatrix} 
+1 \\ 
+\vdots  \\
+0 \\
+\vdots \\
+0 \\
+\end{bmatrix}
+\cdot -x_{1c} + \cdots +
+\begin{bmatrix} 
+0 \\ 
+\vdots  \\
+1 \\
+\vdots \\
+0 \\
+\end{bmatrix} 
+\cdot -x_{ic} + 
+\begin{bmatrix} 
+x_{1c} \\ 
+\vdots  \\
+x_{ic} \\
+\vdots \\
+0 \\
+\end{bmatrix}
+\cdot 1 + \cdots + 
+\begin{bmatrix} 
+x_{1n} \\ 
+\vdots  \\
+x_{in} \\
+\vdots \\
+y_{mn} \\
+\end{bmatrix} 
+\cdot 0 \\ 
+=  
+\begin{bmatrix} 
+-x_{1n} \\ 
+\vdots \\
+0 \\
+\vdots  \\
+0 \\
+\end{bmatrix} 
++ \cdots + 
+\begin{bmatrix} 
+0 \\
+\vdots \\
+-x_{ic} \\ 
+\vdots  \\
+0 \\
+\end{bmatrix} 
++ \cdots +
+\begin{bmatrix} 
+x_{1c} \\ 
+\vdots  \\
+x_{ic} \\
+\vdots \\
+0 \\
+\end{bmatrix} 
++ \cdots +
+\begin{bmatrix} 
+0 \\ 
+\vdots  \\
+0 \\ 
+\vdots  \\
+0 \\
+\end{bmatrix}
+= 0 \\
+\end{gather*}
+
+
+即总是存在向量 $x$，使得 $Ax=0$ 成立，故矩阵 $A$ 不可逆，即 $A$ 为奇异矩阵。\\
+
+
+\textbf{补证} \\
+
+当 $Ax=0$ 成立时，其中 $x$ 为非零向量，若 $A$ 可逆，则有
+\begin{equation*}
+A^{-1}Ax=Ix=x=0
+\end{equation*}
+与前提 $x$ 为非零向量矛盾，故 $A$ 不可逆。
+\end{document}

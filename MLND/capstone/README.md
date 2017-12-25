@@ -7,6 +7,15 @@
 
 - keras(2.1.0)
 
+## 主要文件
+
+- report.pdf - 项目报告
+- dogs_vs_cats.ipynb - 主要代码文件
+- dogs_vs_cats.html - 主要代码文件 HTML 格式
+- image.py - 自定义类
+- feature_*.h5 - 预训练特征向量
+- pred*.csv - 模型预测结果
+
 ## 作业环境
 
 - ubuntu(16.04)

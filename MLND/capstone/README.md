@@ -42,4 +42,4 @@
 3. [卷积神经网络，维基百科](https://zh.wikipedia.org/zh-hans/卷积神经网络)
 4. [TensorFlow 中文社区](http://www.tensorfly.cn/)
 5. [Keras Documentation](https://keras.io/)
-6. [Keras Documentation [6] 猫狗大战，杨培文](https://github.com/ypwhs/dogs_vs_cats)
+6. [猫狗大战，杨培文](https://github.com/ypwhs/dogs_vs_cats)

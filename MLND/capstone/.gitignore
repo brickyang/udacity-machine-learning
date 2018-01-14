@@ -2,7 +2,10 @@
 .DS_Store
 train/
 test/
-images/
+images
+screenshots/
+search_abnormal.ipynb
+feature_*.h5
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

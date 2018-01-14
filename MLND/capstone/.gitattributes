@@ -1,4 +1,0 @@
-report/*.h5 filter=lfs diff=lfs merge=lfs -text
-feature_inceptionv3.h5 filter=lfs diff=lfs merge=lfs -text
-feature_resnet50.h5 filter=lfs diff=lfs merge=lfs -text
-feature_xception.h5 filter=lfs diff=lfs merge=lfs -text
